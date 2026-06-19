@@ -105,7 +105,7 @@ export default function Dashboard({
   return (
     <div className="space-y-8">
       {/* Header Area */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-zinc-800 pb-6">
+      <div className="flex flex-col gap-4">
         {/* <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Digital Carbon Twin Dashboard
@@ -115,7 +115,7 @@ export default function Dashboard({
             Analytical environment mirroring lifestyle footprint computations in real-time.
           </p>
         </div> */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
           <img
             src={logo}
             alt="CarbonTwin AI"
@@ -324,7 +324,7 @@ duration-300
             <span className="text-xs text-zinc-500 font-mono uppercase">Unit: kg CO2e / month</span>
           </div>
 
-          <div className="mt-4 h-[300px] md:h-[550px]">
+          <div className="mt-4 h-[260px] sm:h-[320px] md:h-[550px]">
           <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>

@@ -382,7 +382,7 @@ export default function App() {
 
 
       {/* Main Grid Wrapper */}
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen w-full">
 
         {/* Left hand Sidebar */}
         <aside className="w-full md:w-[260px] bg-zinc-950/90 backdrop-blur-xl border-r border-emerald-500/10 p-4 shrink-0 flex flex-col justify-between hidden md:flex">
@@ -528,47 +528,61 @@ text-black transition"
               />
 
               <div className="fixed top-0 left-0 h-screen w-[280px] z-50 bg-zinc-950 border-r border-zinc-800 p-4 overflow-y-auto">
-                {/* menu content */}
+
+                <div className="flex items-center gap-2 mb-6">
+                  <img
+                    src={logo}
+                    alt="CarbonTwin AI"
+                    className="w-8 h-8"
+                  />
+                  <span className="text-white font-bold font-mono">
+                    CarbonTwin AI
+                  </span>
+                </div>
+
+                <div className="space-y-2">
+                  {menuItems.map((item) => {
+                    const Icon = item.icon;
+                    const isSelected = activeTab === item.id;
+
+                    return (
+                      <button
+                        key={item.id}
+                        onClick={() => {
+                          setActiveTab(item.id);
+                          setMobileMenuOpen(false);
+                        }}
+                        className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left transition ${isSelected
+                            ? "bg-zinc-900 text-white font-bold"
+                            : "text-zinc-500 hover:bg-zinc-900/40"
+                          }`}
+                      >
+                        <Icon className="w-4 h-4" />
+                        {item.label}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="border-t border-zinc-900 my-4 pt-4" />
+
+                <button
+                  onClick={() => {
+                    localStorage.removeItem("carbontwin_user");
+                    setCurrentUser(null);
+                    setLatestFeature(null);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full text-left px-3 py-2.5 rounded-lg text-red-400 font-bold hover:bg-zinc-900/40 transition"
+                >
+                  Sign Out from Session
+                </button>
               </div>
             </>
           )}
-          <div className="fixed top-0 left-0 h-screen w-[280px] z-50 bg-zinc-950 border-b border-zinc-900 p-4 space-y-2 font-mono text-xs flex flex-col">
-            {menuItems.map((item) => {
-              const Icon = item.icon;
-              const isSelected = activeTab === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    setActiveTab(item.id);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left transition ${isSelected ? 'bg-zinc-900 text-white font-bold' : 'text-zinc-500'}`}
-                >
-                  <Icon className="w-4 h-4" /> {item.label}
-                </button>
-              );
-            })}
-
-            <div className="border-t border-zinc-900 my-2 pt-2" />
-
-            <button
-              onClick={() => {
-                localStorage.removeItem('carbontwin_user');
-                setCurrentUser(null);
-                setLatestFeature(null);
-                setMobileMenuOpen(false);
-              }}
-              className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left text-red-400 font-bold hover:bg-zinc-900/40 transition"
-              id="mobile-logout-btn"
-            >
-              Sign Out from Session
-            </button>
-          </div>
         </header>
-
         {/* Right hand Content Stage Area */}
-        <main className="flex-1 p-3 md:p-8 overflow-y-auto">
+        <main className="flex-1 w-full p-3 md:p-8 overflow-y-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
