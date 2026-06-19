@@ -1,0 +1,6 @@
+{
+  "name": "CarbonTwin AI",
+  "description": "Multi-user digital twin modeling platform with dynamic carbon computation, time series forecasts, playbooks, and secure session management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
