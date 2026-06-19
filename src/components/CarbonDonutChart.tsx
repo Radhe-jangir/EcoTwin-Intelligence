@@ -32,7 +32,7 @@ export default function CarbonDonutChart({
             dataKey="value"
             nameKey="category"
             innerRadius={70}
-            outerRadius={110}
+            outerRadius={90}
             paddingAngle={3}
           >
             {data.map((_, index) => (

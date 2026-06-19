@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import logo from "/assets/logo.png";
 import carbonBg from "/assets/carbon-bg.jpg";
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  AppWindow, LayoutDashboard, Sliders, FlaskConical, Target, Award, ShieldCheck, 
+import {
+  AppWindow, LayoutDashboard, Sliders, FlaskConical, Target, Award, ShieldCheck,
   Linkedin, Gauge, GraduationCap, Plus, Compass, ChevronRight, Menu, X, Cpu, Info
 } from 'lucide-react';
 
@@ -21,8 +21,8 @@ import AddInputModal from './components/AddInputModal';
 import EcoCoach from './components/EcoCoach';
 import AuthPage from './components/AuthPage';
 
-import { 
-  DayInput, EngineeredFeatures, Forecast, Recommendation, UserPersona, SimulationResult, ModelMetric 
+import {
+  DayInput, EngineeredFeatures, Forecast, Recommendation, UserPersona, SimulationResult, ModelMetric
 } from './types';
 
 export default function App() {
@@ -34,6 +34,9 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<string>('dashboard'); // default to carbon dashboard
   const [isOpenAddModal, setIsOpenAddModal] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+
 
   // Consolidated global state
   const [profile, setProfile] = useState({
@@ -62,7 +65,7 @@ export default function App() {
       const response = await fetch('/api/carbon/state', { headers });
       if (!response.ok) throw new Error("Could not sync with local database server.");
       const data = await response.json();
-      
+
       setProfile(data.profile);
       setLatestFeature(data.latestFeature);
       setHistory(data.history);
@@ -76,32 +79,32 @@ export default function App() {
   };
 
   const handleRecalculate = async () => {
-  try {
-    const headers: HeadersInit = {};
+    try {
+      const headers: HeadersInit = {};
 
-    if (currentUser) {
-      headers["x-user-id"] =
-        currentUser.userId;
-    }
-
-    await fetch(
-      "/api/carbon/recalculate",
-      {
-        method: "POST",
-        headers
+      if (currentUser) {
+        headers["x-user-id"] =
+          currentUser.userId;
       }
-    );
 
-    await fetchState();
+      await fetch(
+        "/api/carbon/recalculate",
+        {
+          method: "POST",
+          headers
+        }
+      );
 
-    alert(
-      "Models recalculated successfully"
-    );
+      await fetchState();
 
-  } catch (err) {
-    console.error(err);
-  }
-};
+      alert(
+        "Models recalculated successfully"
+      );
+
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
     if (currentUser) {
@@ -243,7 +246,7 @@ export default function App() {
 
   const handleCompleteAction = (id: string) => {
     setRecommendations(prev => prev.map(rec => rec.id === id ? { ...rec, status: 'completed' } : rec));
-    
+
     // Simulate updating eco-score on live UI
     if (latestFeature) {
       const matched = recommendations.find(r => r.id === id);
@@ -273,7 +276,7 @@ export default function App() {
     switch (activeTab) {
       case 'dashboard':
         return latestFeature ? (
-          <Dashboard 
+          <Dashboard
             profile={profile}
             latestFeature={latestFeature}
             history={history}
@@ -289,7 +292,7 @@ export default function App() {
         return <FeatureLab />;
       case 'forecast':
         return (
-          <Forecasting 
+          <Forecasting
             history={history}
             currentForecast={currentForecast!}
             onAlgorithmChange={handleForecastingAlgChange}
@@ -297,7 +300,7 @@ export default function App() {
         );
       case 'recommendations':
         return (
-          <Recommendations 
+          <Recommendations
             recommendations={recommendations}
             onAcceptAction={handleAcceptAction}
             onCompleteAction={handleCompleteAction}
@@ -305,7 +308,7 @@ export default function App() {
         );
       case 'explainable':
         return latestFeature ? (
-          <ExplainableAI 
+          <ExplainableAI
             latestFeature={latestFeature}
             userPersona={profile.persona}
             onGeneratePlan={handleGeneratePlan}
@@ -315,7 +318,7 @@ export default function App() {
         );
       case 'simulation':
         return latestFeature ? (
-          <SimulationLab 
+          <SimulationLab
             latestFeature={latestFeature}
             onRunSimulation={handleRunSimulation}
           />
@@ -326,7 +329,7 @@ export default function App() {
         return <ModelMonitoring metrics={monitoringMetrics} />;
       case 'linkedin':
         return latestFeature ? (
-          <LinkedInReport 
+          <LinkedInReport
             latestFeature={latestFeature}
             userPersona={profile.persona}
           />
@@ -335,7 +338,7 @@ export default function App() {
         );
       default:
         return latestFeature ? (
-          <Dashboard 
+          <Dashboard
             profile={profile}
             latestFeature={latestFeature}
             history={history}
@@ -352,7 +355,7 @@ export default function App() {
 
   if (!currentUser) {
     return (
-      <AuthPage 
+      <AuthPage
         onAuthSuccess={(user) => {
           localStorage.setItem('carbontwin_user', JSON.stringify(user));
           setCurrentUser(user);
@@ -360,30 +363,30 @@ export default function App() {
       />
     );
   }
-{/* Overlay */}
-  {/* <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/35 to-black/60" /> */}
+  {/* Overlay */ }
+  {/* <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/35 to-black/60" /> */ }
   <div className="absolute inset-0 bg-black/40" />
   return (
-    
+
     <div
-  className="min-h-screen text-gray-100 flex flex-col relative overflow-hidden"
-  style={{
-    backgroundImage: `url(${carbonBg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed",
-  }}
->
-  
-      
+      className="min-h-screen text-gray-100 flex flex-col relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${carbonBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+
+
 
 
       {/* Main Grid Wrapper */}
-      <div className="flex h-screen">
-        
+      <div className="flex min-h-screen">
+
         {/* Left hand Sidebar */}
         <aside className="w-full md:w-[260px] bg-zinc-950/90 backdrop-blur-xl border-r border-emerald-500/10 p-4 shrink-0 flex flex-col justify-between hidden md:flex">
-          
+
           <div className="space-y-6">
             {/* Logo area */}
             <div className="flex items-center gap-2 px-2 py-1.5">
@@ -452,47 +455,47 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
               Sign Out
             </button>
             <div className="mt-4 p-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5">
-  <h3 className="text-white font-bold text-sm mb-2">
-    Built by Radheshyam Suthar
+              <h3 className="text-white font-bold text-sm mb-2">
+                Built by Radheshyam Suthar
 
-    
-  </h3>
-  
 
-  <p className="text-zinc-400 text-[11px] mb-3">
-    AI/ML Engineer • Data Analytics
-  </p>
+              </h3>
 
-  <div className="flex flex-col gap-2 text-[11px]">
-    <a
-      href="https://linkedin.com/in/radheshyamsuthar"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-emerald-400 hover:text-emerald-300"
-    >
-      LinkedIn Profile
-    </a>
 
-    <a
-      href="https://github.com/Radhe-jangir"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-emerald-400 hover:text-emerald-300"
-    >
-      GitHub
-    </a>
+              <p className="text-zinc-400 text-[11px] mb-3">
+                AI/ML Engineer • Data Analytics
+              </p>
 
-    <a
-      href="mailto:jangirradhe175@gmail.com"
-      className="text-emerald-400 hover:text-emerald-300"
-    >
-      Email
-    </a>
-  </div>
-  <p className="text-[18px] text-zinc-500 mt-3">
-  CarbonTwin AI © 2026
-</p>
-</div>
+              <div className="flex flex-col gap-2 text-[11px]">
+                <a
+                  href="https://linkedin.com/in/radheshyamsuthar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300"
+                >
+                  LinkedIn Profile
+                </a>
+
+                <a
+                  href="https://github.com/Radhe-jangir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300"
+                >
+                  GitHub
+                </a>
+
+                <a
+                  href="mailto:jangirradhe175@gmail.com"
+                  className="text-emerald-400 hover:text-emerald-300"
+                >
+                  Email
+                </a>
+              </div>
+              <p className="text-[18px] text-zinc-500 mt-3">
+                CarbonTwin AI © 2026
+              </p>
+            </div>
           </div>
 
         </aside>
@@ -500,13 +503,15 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
         {/* Mobile Navigation Header */}
         <header className="md:hidden bg-black border-b border-zinc-900 p-4 flex justify-between items-center relative z-40">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-emerald-500 flex items-center justify-center text-zinc-950 font-mono font-bold text-xs">
-              CT
-            </div>
+            <img
+              src={logo}
+              alt="CarbonTwin AI"
+              className="w-8 h-8 object-contain"
+            />
             <span className="text-xs font-mono font-bold tracking-wider text-white uppercase">CarbonTwin AI</span>
           </div>
 
-          <button 
+          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-1 px-2 text-zinc-400 hover:text-white rounded bg-gradient-to-br from-emerald-500 to-cyan-500
 text-black transition"
@@ -516,44 +521,54 @@ text-black transition"
 
           {/* Mobile Slide panel */}
           {mobileMenuOpen && (
-            <div className="absolute top-14 left-0 w-full bg-zinc-950 border-b border-zinc-900 p-4 space-y-2 font-mono text-xs flex flex-col">
-              {menuItems.map((item) => {
-                const Icon = item.icon;
-                const isSelected = activeTab === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      setActiveTab(item.id);
-                      setMobileMenuOpen(false);
-                    }}
-                    className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left transition ${isSelected ? 'bg-zinc-900 text-white font-bold' : 'text-zinc-500'}`}
-                  >
-                    <Icon className="w-4 h-4" /> {item.label}
-                  </button>
-                );
-              })}
+            <>
+              <div
+                className="fixed inset-0 bg-black/70 z-40"
+                onClick={() => setMobileMenuOpen(false)}
+              />
 
-              <div className="border-t border-zinc-900 my-2 pt-2" />
-
-              <button
-                onClick={() => {
-                  localStorage.removeItem('carbontwin_user');
-                  setCurrentUser(null);
-                  setLatestFeature(null);
-                  setMobileMenuOpen(false);
-                }}
-                className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left text-red-400 font-bold hover:bg-zinc-900/40 transition"
-                id="mobile-logout-btn"
-              >
-                Sign Out from Session
-              </button>
-            </div>
+              <div className="fixed top-0 left-0 h-screen w-[280px] z-50 bg-zinc-950 border-r border-zinc-800 p-4 overflow-y-auto">
+                {/* menu content */}
+              </div>
+            </>
           )}
+          <div className="fixed top-0 left-0 h-screen w-[280px] z-50 bg-zinc-950 border-b border-zinc-900 p-4 space-y-2 font-mono text-xs flex flex-col">
+            {menuItems.map((item) => {
+              const Icon = item.icon;
+              const isSelected = activeTab === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    setActiveTab(item.id);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left transition ${isSelected ? 'bg-zinc-900 text-white font-bold' : 'text-zinc-500'}`}
+                >
+                  <Icon className="w-4 h-4" /> {item.label}
+                </button>
+              );
+            })}
+
+            <div className="border-t border-zinc-900 my-2 pt-2" />
+
+            <button
+              onClick={() => {
+                localStorage.removeItem('carbontwin_user');
+                setCurrentUser(null);
+                setLatestFeature(null);
+                setMobileMenuOpen(false);
+              }}
+              className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left text-red-400 font-bold hover:bg-zinc-900/40 transition"
+              id="mobile-logout-btn"
+            >
+              Sign Out from Session
+            </button>
+          </div>
         </header>
 
         {/* Right hand Content Stage Area */}
-        <main className="flex-1 bg-gradient-to-br from-zinc-950 via-zinc-950 to-emerald-950/10 p-4 sm:p-8 overflow-y-auto w-full">
+        <main className="flex-1 p-3 md:p-8 overflow-y-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -574,7 +589,7 @@ text-black transition"
 
       {/* Input Modal logs */}
       {isOpenAddModal && (
-        <AddInputModal 
+        <AddInputModal
           onClose={() => setIsOpenAddModal(false)}
           onSave={handleSaveInput}
         />

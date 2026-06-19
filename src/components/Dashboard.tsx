@@ -115,7 +115,7 @@ export default function Dashboard({
             Analytical environment mirroring lifestyle footprint computations in real-time.
           </p>
         </div> */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <img
             src={logo}
             alt="CarbonTwin AI"
@@ -127,7 +127,7 @@ drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]
           />
 
           <div>
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-2xl md:text-4xl font-bold">
               Digital Carbon Twin Dashboard
             </h1>
             <p className="text-zinc-400">
@@ -160,7 +160,7 @@ drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]
         }}
         initial="hidden"
         animate="show"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
       >
         {/* Card 1: User Persona */}
         <motion.div
@@ -324,7 +324,7 @@ duration-300
             <span className="text-xs text-zinc-500 font-mono uppercase">Unit: kg CO2e / month</span>
           </div>
 
-          <div className="mt-4 h-[550px]">
+          <div className="mt-4 h-[300px] md:h-[550px]">
           <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>
@@ -357,6 +357,7 @@ duration-300
           className="
 p-6
 rounded-2xl
+overflow-hidden
 backdrop-blur-xl
 bg-white/[0.03]
 border border-white/10

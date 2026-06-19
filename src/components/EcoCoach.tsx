@@ -61,7 +61,7 @@ export default function EcoCoach({ onSendMessage }: EcoCoachProps) {
       {!isOpen && (
         <button 
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-40 px-5 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-black rounded-2xl shadow-2xl shadow-emerald-500/20 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 inline-flex items-center gap-2 font-semibold text-sm backdrop-blur-xl"
+          className="fixed bottom-3 right-3 md:bottom-6 md:right-6 z-40 px-5 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-black rounded-2xl shadow-2xl shadow-emerald-500/20 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 inline-flex items-center gap-2 font-semibold text-sm backdrop-blur-xl"
         >
           <MessageSquare className="w-5 h-5" /> Ask Eco Coach
         </button>

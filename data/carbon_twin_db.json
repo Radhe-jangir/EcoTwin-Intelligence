@@ -440,6 +440,35 @@
             "mode": "none",
             "cabinClass": "none"
           }
+        },
+        {
+          "id": "input_2026-06-19",
+          "date": "2026-06-19",
+          "transport": {
+            "distance_km": 15,
+            "mode": "car",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 8,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 0.5,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
         }
       ],
       "engineeredHistory": [
@@ -645,23 +674,23 @@
           "id": "2026-06",
           "userId": "user_digital_twin_1",
           "period": "2026-06",
-          "totalCO2e_kg": 580.4,
-          "transportCO2e_kg": 120,
-          "foodCO2e_kg": 105.2,
-          "electricityCO2e_kg": 150.2,
-          "shoppingCO2e_kg": 35,
-          "wasteCO2e_kg": 10,
-          "travelCO2e_kg": 160,
-          "monthlyTransportDistance_km": 300,
-          "avgFoodImpactScore_normalized": 0.12,
-          "avgElectricityUsage_kWh": 640,
-          "wasteDiversionRate": 0.82,
-          "sustainabilityIndex": 88,
-          "dataCompletenessScore": 1
+          "totalCO2e_kg": 501.8,
+          "transportCO2e_kg": 14.9,
+          "foodCO2e_kg": 153.2,
+          "electricityCO2e_kg": 34.2,
+          "shoppingCO2e_kg": 293,
+          "wasteCO2e_kg": 6.5,
+          "travelCO2e_kg": 0,
+          "monthlyTransportDistance_km": 328,
+          "avgFoodImpactScore_normalized": 0.416,
+          "avgElectricityUsage_kWh": 146.9,
+          "wasteDiversionRate": 0.7,
+          "sustainabilityIndex": 68,
+          "dataCompletenessScore": 0.57
         }
       ],
-      "userPersona": "Climate Champion",
-      "sustainabilityIndex": 88
+      "userPersona": "Sustainability Enthusiast",
+      "sustainabilityIndex": 68
     }
   ]
 }
