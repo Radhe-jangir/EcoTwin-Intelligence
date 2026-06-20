@@ -128,10 +128,11 @@ drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]
 
           <div>
             <h1 className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight">
-              Digital Carbon Twin Dashboard
+              EcoTwin Intelligence Platform
+              
             </h1>
             <p className="text-zinc-400 text-sm sm:text-base">
-              Analytical environment mirroring lifestyle footprint computations in real-time.
+              AI-Powered Sustainability Analytics & Digital Twin Environment.
             </p>
           </div>
         </div>
