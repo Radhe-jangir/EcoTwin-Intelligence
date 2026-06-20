@@ -369,7 +369,7 @@ export default function App() {
   return (
 
     <div
-      className="min-h-screen text-gray-100 flex flex-col relative overflow-hidden"
+      className="min-h-screen text-gray-100 flex flex-col relative overflow-x-hidden"
       style={{
         backgroundImage: `url(${carbonBg})`,
         backgroundSize: "cover",
@@ -527,7 +527,7 @@ text-black transition"
                 onClick={() => setMobileMenuOpen(false)}
               />
 
-              <div className="fixed top-0 left-0 h-screen w-[280px] z-50 bg-zinc-950 border-r border-zinc-800 p-4 overflow-y-auto">
+              <div className="fixed top-0 left-0 h-screen w-[85vw] max-w-[320px] z-50 bg-zinc-950 border-r border-zinc-800 p-4 overflow-y-auto">
 
                 <div className="flex items-center gap-2 mb-6">
                   <img
@@ -553,8 +553,8 @@ text-black transition"
                           setMobileMenuOpen(false);
                         }}
                         className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left transition ${isSelected
-                            ? "bg-zinc-900 text-white font-bold"
-                            : "text-zinc-500 hover:bg-zinc-900/40"
+                          ? "bg-zinc-900 text-white font-bold"
+                          : "text-zinc-500 hover:bg-zinc-900/40"
                           }`}
                       >
                         <Icon className="w-4 h-4" />
@@ -582,7 +582,7 @@ text-black transition"
           )}
         </header>
         {/* Right hand Content Stage Area */}
-        <main className="flex-1 w-full p-3 md:p-8 overflow-y-auto">
+        <main className="flex-1 w-full p-2 sm:p-4 md:p-8 overflow-y-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}

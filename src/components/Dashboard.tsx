@@ -115,7 +115,7 @@ export default function Dashboard({
             Analytical environment mirroring lifestyle footprint computations in real-time.
           </p>
         </div> */}
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <img
             src={logo}
             alt="CarbonTwin AI"
@@ -127,15 +127,15 @@ drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]
           />
 
           <div>
-            <h1 className="text-2xl md:text-4xl font-bold">
+            <h1 className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight">
               Digital Carbon Twin Dashboard
             </h1>
-            <p className="text-zinc-400">
+            <p className="text-zinc-400 text-sm sm:text-base">
               Analytical environment mirroring lifestyle footprint computations in real-time.
             </p>
           </div>
         </div>
-        <div className="flex gap-2 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
           <button
             onClick={onRefresh}
             className="flex items-center gap-2 px-3 py-2 text-zinc-300 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 transition rounded-lg text-sm"
@@ -160,7 +160,7 @@ drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]
         }}
         initial="hidden"
         animate="show"
-        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
+        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4"
       >
         {/* Card 1: User Persona */}
         <motion.div
@@ -324,7 +324,7 @@ duration-300
             <span className="text-xs text-zinc-500 font-mono uppercase">Unit: kg CO2e / month</span>
           </div>
 
-          <div className="mt-4 h-[260px] sm:h-[320px] md:h-[550px]">
+          <div className="mt-4 h-[220px] sm:h-[320px] md:h-[550px]">
           <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>
@@ -476,8 +476,8 @@ space-y-4
             </button>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse font-mono text-xs">
+          <div className="overflow-x-auto max-w-full">
+            <table className="min-w-[900px] text-left border-collapse font-mono text-xs">
               <thead>
                 <tr className="border-b border-zinc-800 text-zinc-400 uppercase tracking-wider">
                   <th className="py-3 px-4">Date</th>
