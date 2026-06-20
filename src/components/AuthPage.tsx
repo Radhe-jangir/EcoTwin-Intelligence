@@ -72,7 +72,7 @@ export default function AuthPage({ onAuthSuccess }: AuthPageProps) {
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-indigo-500 text-zinc-950 font-mono font-extrabold text-lg shadow-xl mb-4">
             <Leaf className="w-6 h-6 text-zinc-950 fill-zinc-950" />
           </div>
-          <h1 className="text-2xl font-black text-white tracking-wider font-sans uppercase">CarbonTwin AI</h1>
+          <h1 className="text-2xl font-black text-white tracking-wider font-sans uppercase">EcoTwin Intelligence</h1>
           <p className="text-xs text-zinc-400 font-mono tracking-widest mt-1.5 uppercase">Digital Twin Modeling Platform</p>
         </div>
 

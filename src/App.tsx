@@ -380,7 +380,7 @@ export default function App() {
       }}
       
     >
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/87"></div>
 
 
 
@@ -396,16 +396,16 @@ export default function App() {
             <div className="flex items-center gap-2 px-2 py-1.5">
               <img
                 src={logo}
-                alt="CarbonTwin AI"
+                alt="EcoTwin Intelligence"
                 className="
-w-10 h-10
+w-14 h-14
 object-contain
 drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]
 "
               />
               <div>
-                <h2 className="text-sm font-extrabold text-white tracking-widest font-mono uppercase">CarbonTwin AI</h2>
-                <span className="text-[9px] text-zinc-500 font-mono tracking-widest block uppercase">Telemetry v2.4</span>
+                <h2 className="text-base font-extrabold text-white tracking-wider">EcoTwin AI</h2>
+                <span className="text-[9px] text-zinc-500 font-mono tracking-widest block uppercase">INTELLIGENCE PLATFORM</span>
               </div>
             </div>
 
@@ -460,9 +460,8 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
             </button>
             <div className="mt-4 p-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5">
               <h3 className="text-white font-bold text-sm mb-2">
-                Built by Radheshyam Suthar
-
-
+                Founder & Developer
+                Radheshyam Suthar
               </h3>
 
 
@@ -496,8 +495,8 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
                   Email
                 </a>
               </div>
-              <p className="text-[18px] text-zinc-500 mt-3">
-                CarbonTwin AI © 2026
+              <p className="text-[12px] text-zinc-500 mt-3">
+                EcoTwin Intelligence © 2026
               </p>
             </div>
           </div>
@@ -509,10 +508,10 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
           <div className="flex items-center gap-2">
             <img
               src={logo}
-              alt="CarbonTwin AI"
+              alt="EcoTwin Intelligence"
               className="w-8 h-8 object-contain"
             />
-            <span className="text-xs font-mono font-bold tracking-wider text-white uppercase">CarbonTwin AI</span>
+            <span className="text-xs font-mono font-bold tracking-wider text-white uppercase">EcoTwin AI</span>
           </div>
 
           <button
@@ -520,7 +519,7 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
             className="p-1 px-2 text-zinc-400 hover:text-white rounded bg-gradient-to-br from-emerald-500 to-cyan-500
 text-black transition"
           >
-            {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            {mobileMenuOpen ? <X className="w-7 h-7 text-emerald-400" /> : <Menu className="w-7 h-7 text-emerald-400" />}
           </button>
 
           {/* Mobile Slide panel */}
@@ -536,11 +535,11 @@ text-black transition"
                 <div className="flex items-center gap-2 mb-6">
                   <img
                     src={logo}
-                    alt="CarbonTwin AI"
+                    alt="EcoTwin Intelligence"
                     className="w-8 h-8"
                   />
                   <span className="text-white font-bold font-mono">
-                    CarbonTwin AI
+                    EcoTwin AI
                   </span>
                 </div>
 

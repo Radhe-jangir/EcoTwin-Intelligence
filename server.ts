@@ -889,7 +889,7 @@ async function runServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`[CarbonTwin AI] Server running dynamically on http://localhost:${PORT}`);
+    console.log(`[EcoTwin Intelligence] Server running dynamically on http://localhost:${PORT}`);
     console.log("Environment keys:", Object.keys(process.env).filter(k => !k.includes("KEY") && !k.includes("SECRET")));
   });
 }
@@ -903,7 +903,7 @@ app.post("/api/gemini/chat", async (req, res) => {
         {
           role: "system",
           content:
-            "You are CarbonTwin AI. Answer any user question accurately and helpfully."
+            "You are EcoTwin Intelligence. Answer any user question accurately and helpfully."
         },
 
         ...history.map((m: any) => ({

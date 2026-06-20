@@ -15,7 +15,7 @@ export default function LinkedInReport({ latestFeature, userPersona }: LinkedInR
   const ecoScore = latestFeature ? latestFeature.sustainabilityIndex : 88;
   const reductionGoal = 43; // approximate decrease %
 
-  const postText = `🌍 Delighted to share my latest sustainability analytics report generated via CarbonTwin AI! 
+  const postText = `🌍 Delighted to share my latest sustainability analytics report generated via EcoTwin Intelligence! 
 
 By continuously auditing my lifestyle variables, modeling what-if strategies, and tracking my carbon twin, I've optimized my carbon metrics:
 
@@ -81,7 +81,7 @@ We can't optimize what we don't calculate. Striving towards net-zero on-site emi
                 </div>
               </div>
 
-              <span className="text-[9px] text-zinc-600 block">Authenticated by CarbonTwin AI Model networks</span>
+              <span className="text-[9px] text-zinc-600 block">Authenticated by EcoTwin Intelligence Model networks</span>
             </div>
           </div>
 

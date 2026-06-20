@@ -11,7 +11,7 @@ export default function RecruiterMode() {
           <Award className="w-4 h-4 animate-pulse" /> Engineering Credentials Walkthrough
         </div>
         <h1 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-          CarbonTwin AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Recruiter Blueprint</span>
+          EcoTwin Intelligence <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Recruiter Blueprint</span>
         </h1>
         <p className="mt-2 text-zinc-400 max-w-4xl text-sm sm:text-base">
           This system stands as an enterprise-grade showcase of full-stack engineering, combining custom predictive models, modular data pipelines, multi-criteria decision heuristics, and LLM-synthesized explains.

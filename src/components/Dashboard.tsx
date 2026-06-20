@@ -118,7 +118,7 @@ export default function Dashboard({
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <img
             src={logo}
-            alt="CarbonTwin AI"
+            alt="EcoTwin AI"
             className="
 w-10 h-10
 object-contain
