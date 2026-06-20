@@ -103,7 +103,7 @@ export default function Dashboard({
   };
 
   return (
-    <div className="space-y-8">
+    <div className="w-full max-w-full overflow-x-hidden space-y-6 md:space-y-8">
       {/* Header Area */}
       <div className="flex flex-col gap-4">
         {/* <div>

@@ -374,7 +374,8 @@ export default function App() {
         backgroundImage: `url(${carbonBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment:
+          window.innerWidth < 768 ? "scroll" : "fixed",
       }}
     >
 
@@ -382,7 +383,7 @@ export default function App() {
 
 
       {/* Main Grid Wrapper */}
-      <div className="flex min-h-screen w-full">
+      <div className="flex flex-col md:flex-row min-h-screen w-full">
 
         {/* Left hand Sidebar */}
         <aside className="w-full md:w-[260px] bg-zinc-950/90 backdrop-blur-xl border-r border-emerald-500/10 p-4 shrink-0 flex flex-col justify-between hidden md:flex">
@@ -501,7 +502,7 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
         </aside>
 
         {/* Mobile Navigation Header */}
-        <header className="md:hidden bg-black border-b border-zinc-900 p-4 flex justify-between items-center relative z-40">
+        <header className="md:hidden w-full bg-black border-b border-zinc-900 p-4 flex justify-between items-center relative z-40">
           <div className="flex items-center gap-2">
             <img
               src={logo}
@@ -523,7 +524,7 @@ text-black transition"
           {mobileMenuOpen && (
             <>
               <div
-                className="fixed inset-0 bg-black/70 z-40"
+                className="fixed inset-0 bg-black/70 z-40 md:hidden"
                 onClick={() => setMobileMenuOpen(false)}
               />
 
@@ -582,7 +583,7 @@ text-black transition"
           )}
         </header>
         {/* Right hand Content Stage Area */}
-        <main className="flex-1 w-full p-2 sm:p-4 md:p-8 overflow-y-auto">
+        <main className="w-full flex-1 overflow-x-hidden overflow-y-auto p-2 sm:p-4 md:p-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}

@@ -148,7 +148,7 @@ export default function Recommendations({
                     Done
                   </div>
                 ) : (
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                     {rec.status !== 'accepted' ? (
                       <button 
                         onClick={() => onAcceptAction(rec.id)}
