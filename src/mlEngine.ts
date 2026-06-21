@@ -915,46 +915,74 @@ export function generatePreseededHistory(): EngineeredFeatures[] {
   return data;
 }
 
-// Generate realistic seeded logs of daily inputs
 export function generatePreseededDailyInputs(): DayInput[] {
   const list: DayInput[] = [];
-  const modes: ('car' | 'public' | 'bike' | 'walk' | 'ev')[] = ['car', 'public', 'bike', 'walk', 'ev'];
-  const meals: ('vegan' | 'vegetarian' | 'poultry' | 'fish' | 'red_meat')[] = ['vegan', 'vegetarian', 'poultry', 'fish', 'red_meat'];
-  const shops: ('electronics' | 'clothing' | 'home_goods' | 'other' | 'none')[] = ['electronics', 'clothing', 'home_goods', 'other', 'none'];
-  const wastes: ('recyclable' | 'compost' | 'landfill')[] = ['recyclable', 'compost', 'landfill'];
 
-  // Seed sample inputs for current month 2026-06
-  for (let d = 1; d <= 15; d++) {
-    const dayStr = d.toString().padStart(2, '0');
-    list.push({
-      id: `2026-06-${dayStr}`,
-      date: `2026-06-${dayStr}`,
-      transport: {
-        distance_km: Math.round(10 + Math.random() * 25),
-        mode: modes[d % 5],
-        fuelType: (d % 5 === 0) ? 'electric' : d % 2 === 0 ? 'petrol' : 'diesel'
-      },
-      food: {
-        meal_type: meals[d % 5]
-      },
-      electricity: {
-        kwh_usage: parseFloat((5 + Math.random() * 8).toFixed(1)),
-        bill_amount_usd: 0
-      },
-      shopping: {
-        category: shops[d % 5],
-        amount_usd: shops[d % 5] === 'none' ? 0 : Math.round(15 + Math.random() * 120)
-      },
-      waste: {
-        weight_kg: parseFloat((0.2 + Math.random() * 1.5).toFixed(2)),
-        type: wastes[d % 3]
-      },
-      travel: {
-        distance_km: 0,
-        mode: 'none',
-        cabinClass: 'none'
-      }
-    });
-  }
+  const modes = ['car', 'public', 'bike', 'walk', 'ev'] as const;
+  const meals = ['vegan', 'vegetarian', 'poultry', 'fish', 'red_meat'] as const;
+  const shops = ['electronics', 'clothing', 'home_goods', 'other', 'none'] as const;
+  const wastes = ['recyclable', 'compost', 'landfill'] as const;
+
+  const months = [
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ];
+
+  months.forEach((month, monthIndex) => {
+    for (let d = 1; d <= 15; d++) {
+      const dayStr = d.toString().padStart(2, '0');
+
+      list.push({
+        id: `${month}-${dayStr}`,
+        date: `${month}-${dayStr}`,
+
+        transport: {
+          distance_km: Math.round(10 + Math.random() * 25),
+          mode: modes[(d + monthIndex) % 5],
+          fuelType:
+            (d % 5 === 0)
+              ? "electric"
+              : d % 2 === 0
+              ? "petrol"
+              : "diesel"
+        },
+
+        food: {
+          meal_type: meals[(d + monthIndex) % 5]
+        },
+
+        electricity: {
+          kwh_usage: parseFloat(
+            (5 + Math.random() * 8).toFixed(1)
+          ),
+          bill_amount_usd: 0
+        },
+
+        shopping: {
+          category: shops[(d + monthIndex) % 5],
+          amount_usd:
+            shops[(d + monthIndex) % 5] === "none"
+              ? 0
+              : Math.round(15 + Math.random() * 120)
+        },
+
+        waste: {
+          weight_kg: parseFloat(
+            (0.2 + Math.random() * 1.5).toFixed(2)
+          ),
+          type: wastes[d % 3]
+        },
+
+        travel: {
+          distance_km: 0,
+          mode: "none",
+          cabinClass: "none"
+        }
+      });
+    }
+  });
+
   return list;
 }

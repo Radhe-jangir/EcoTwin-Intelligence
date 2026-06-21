@@ -69,34 +69,17 @@ export default function Dashboard({
   
 
   
-  const chartData =
-  history.length === 1
-    ? [
-        history[0],
-        {
-          ...history[0],
-          period: "2026-07"
-        }
-      ].map(h => ({
-        period: h.period,
-        Transport: h.transportCO2e_kg,
-        Food: h.foodCO2e_kg,
-        Electricity: h.electricityCO2e_kg,
-        Shopping: h.shoppingCO2e_kg,
-        Waste: h.wasteCO2e_kg,
-        Travel: h.travelCO2e_kg,
-        Total: h.totalCO2e_kg
-      }))
-    : history.map(h => ({
-        period: h.period,
-        Transport: h.transportCO2e_kg,
-        Food: h.foodCO2e_kg,
-        Electricity: h.electricityCO2e_kg,
-        Shopping: h.shoppingCO2e_kg,
-        Waste: h.wasteCO2e_kg,
-        Travel: h.travelCO2e_kg,
-        Total: h.totalCO2e_kg
-      }));
+const chartData = history.map(h => ({
+  period: h.period,
+  Transport: h.transportCO2e_kg,
+  Food: h.foodCO2e_kg,
+  Electricity: h.electricityCO2e_kg,
+  Shopping: h.shoppingCO2e_kg,
+  Waste: h.wasteCO2e_kg,
+  Travel: h.travelCO2e_kg,
+  Total: h.totalCO2e_kg
+}));
+
 
   // Framer Motion staggered grid variants
   const containerVariants = {
@@ -347,31 +330,115 @@ duration-300
           </div>
 
           <div className="mt-4 h-[220px] sm:h-[320px] md:h-[550px]">
-          <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="colorTransport" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor={colors.transport} stopOpacity={0.2} />
-                    <stop offset="95%" stopColor={colors.transport} stopOpacity={0} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#27272a" vertical={false} />
-                <XAxis dataKey="period" stroke="#71717a" tickLine={false} />
-                <YAxis stroke="#71717a" tickLine={false} />
-                <Tooltip
-                  contentStyle={{ backgroundColor: '#09090b', borderColor: '#27272a', color: '#fff' }}
-                  itemStyle={{ fontSize: '11px' }}
-                />
-                <Legend iconSize={8} iconType="circle" />
-                <Area type="monotone" dataKey="Transport" stackId="1" stroke={colors.transport} fill={colors.transport} fillOpacity={0.25} />
-                <Area type="monotone" dataKey="Food" stackId="1" stroke={colors.food} fill={colors.food} fillOpacity={0.2} />
-                <Area type="monotone" dataKey="Electricity" stackId="1" stroke={colors.electricity} fill={colors.electricity} fillOpacity={0.2} />
-                <Area type="monotone" dataKey="Shopping" stackId="1" stroke={colors.shopping} fill={colors.shopping} fillOpacity={0.2} />
-                <Area type="monotone" dataKey="Waste" stackId="1" stroke={colors.waste} fill={colors.waste} fillOpacity={0.2} />
-                <Area type="monotone" dataKey="Travel" stackId="1" stroke={colors.travel} fill={colors.travel} fillOpacity={0.2} />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div>
+  {chartData.length < 2 ? (
+    <div className="h-full flex items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/20">
+      <div className="text-center">
+        <p className="text-lg text-zinc-300 font-semibold">
+          Insufficient Trend Data
+        </p>
+        <p className="text-sm text-zinc-500 mt-2">
+          Add entries from another month to visualize historical trends.
+        </p>
+      </div>
+    </div>
+  ) : (
+    <ResponsiveContainer width="100%" height="100%">
+      <AreaChart
+        data={chartData}
+        margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
+      >
+        <defs>
+          <linearGradient id="colorTransport" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor={colors.transport} stopOpacity={0.2} />
+            <stop offset="95%" stopColor={colors.transport} stopOpacity={0} />
+          </linearGradient>
+        </defs>
+
+        <CartesianGrid
+          strokeDasharray="3 3"
+          stroke="#27272a"
+          vertical={false}
+        />
+
+        <XAxis
+          dataKey="period"
+          stroke="#71717a"
+          tickLine={false}
+        />
+
+        <YAxis
+          stroke="#71717a"
+          tickLine={false}
+        />
+
+        <Tooltip
+          contentStyle={{
+            backgroundColor: "#09090b",
+            borderColor: "#27272a",
+            color: "#fff"
+          }}
+          itemStyle={{ fontSize: "11px" }}
+        />
+
+        <Legend iconSize={8} iconType="circle" />
+
+        <Area
+          type="monotone"
+          dataKey="Transport"
+          stackId="1"
+          stroke={colors.transport}
+          fill={colors.transport}
+          fillOpacity={0.25}
+        />
+
+        <Area
+          type="monotone"
+          dataKey="Food"
+          stackId="1"
+          stroke={colors.food}
+          fill={colors.food}
+          fillOpacity={0.2}
+        />
+
+        <Area
+          type="monotone"
+          dataKey="Electricity"
+          stackId="1"
+          stroke={colors.electricity}
+          fill={colors.electricity}
+          fillOpacity={0.2}
+        />
+
+        <Area
+          type="monotone"
+          dataKey="Shopping"
+          stackId="1"
+          stroke={colors.shopping}
+          fill={colors.shopping}
+          fillOpacity={0.2}
+        />
+
+        <Area
+          type="monotone"
+          dataKey="Waste"
+          stackId="1"
+          stroke={colors.waste}
+          fill={colors.waste}
+          fillOpacity={0.2}
+        />
+
+        <Area
+          type="monotone"
+          dataKey="Travel"
+          stackId="1"
+          stroke={colors.travel}
+          fill={colors.travel}
+          fillOpacity={0.2}
+        />
+      </AreaChart>
+    </ResponsiveContainer>
+  )}
+</div>
         </div>
 
         {/* Current Period Share Donut representation via Recharts Bar */}

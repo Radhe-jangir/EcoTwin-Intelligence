@@ -363,33 +363,9 @@ app.post("/api/carbon/add-input", (req, res) => {
 
 // Run What-If Simulation Calculus under isolated accounts
 app.post("/api/carbon/recalculate", (req, res) => {
-  const db = loadDatabase();
-  const user = getActiveUser(req, db);
-
-  const periods = [
-    ...new Set(
-      user.dailyInputs.map(i => i.date.slice(0, 7))
-    )
-  ];
-
-  user.engineeredHistory = periods
-    .map(period => {
-      const monthlyInputs = user.dailyInputs.filter(
-        i => i.date.startsWith(period)
-      );
-
-      return aggregateMonthlyFeatures(
-        monthlyInputs,
-        period
-      );
-    })
-    .filter(h => h.totalCO2e_kg < 5000); // remove garbage history
-
-  saveDatabase(db);
-
   res.json({
     success: true,
-    message: "History rebuilt"
+    message: "Refresh completed"
   });
 });
 
