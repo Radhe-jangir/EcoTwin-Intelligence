@@ -173,9 +173,28 @@ app.delete("/api/carbon/delete-input/:id", (req, res) => {
   const db = loadDatabase();
   const user = getActiveUser(req, db);
 
+  // Delete input
   user.dailyInputs = user.dailyInputs.filter(
     (item) => item.id !== id
   );
+
+  // Rebuild monthly history completely
+  const periods = [
+    ...new Set(
+      user.dailyInputs.map(i => i.date.slice(0, 7))
+    )
+  ];
+
+  user.engineeredHistory = periods.map(period => {
+    const monthlyInputs = user.dailyInputs.filter(
+      i => i.date.startsWith(period)
+    );
+
+    return aggregateMonthlyFeatures(
+      monthlyInputs,
+      period
+    );
+  });
 
   saveDatabase(db);
 
@@ -345,35 +364,28 @@ app.post("/api/carbon/recalculate", (req, res) => {
   const db = loadDatabase();
   const user = getActiveUser(req, db);
 
-  // Clear old engineered history
-  user.engineeredHistory = [];
-
-  // Get unique months
   const periods = [
     ...new Set(
-      user.dailyInputs.map(input => input.date.slice(0, 7))
+      user.dailyInputs.map(i => i.date.slice(0, 7))
     )
   ];
 
-  // Rebuild every month
-  periods.forEach(period => {
+  user.engineeredHistory = periods.map(period => {
     const monthlyInputs = user.dailyInputs.filter(
-      input => input.date.startsWith(period)
+      i => i.date.startsWith(period)
     );
 
-    const aggregated = aggregateMonthlyFeatures(
+    return aggregateMonthlyFeatures(
       monthlyInputs,
       period
     );
-
-    user.engineeredHistory.push(aggregated);
   });
 
   saveDatabase(db);
 
   res.json({
     success: true,
-    message: "History rebuilt successfully"
+    message: "Refresh completed"
   });
 });
 
