@@ -214,7 +214,7 @@ Please keep PRs focused and include a clear description of changes.
 
 ## 👤 Author
 
-**Radheshyam Jangir**
+**Radheshyam Suthar**
 B.Tech Computer Science · IGNTU Amarkantak
 Sustainability Intern · SustainAI Solutions Pvt. Ltd.
 
