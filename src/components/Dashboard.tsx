@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "/assets/logo.png";
+import logo from "/assets/logo.svg";
 import CountUp from "react-countup";
 import CarbonDonutChart from "./CarbonDonutChart";
 import { motion } from 'motion/react';
@@ -125,9 +125,10 @@ const chartData = history.map(h => ({
 
   <div className="flex items-center gap-3">
     <img
-      src={logo}
+      src={logo} width={40}
+      height={40}
+      className="w-10 h-10"
       alt="EcoTwin AI"
-      className="w-10 h-10 object-contain"
     />
 
     <div>
@@ -164,10 +165,7 @@ const chartData = history.map(h => ({
       {/* KPI Cards Grid */}
       <motion.div
         variants={cardVariants}
-        whileHover={{
-          y: -6,
-          scale: 1.02
-        }}
+        
         initial="hidden"
         animate="show"
         className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4"
@@ -175,10 +173,7 @@ const chartData = history.map(h => ({
         {/* Card 1: User Persona */}
         <motion.div
           variants={cardVariants}
-          whileHover={{
-            y: -6,
-            scale: 1.02
-          }}
+          
           className="
 p-6
 rounded-2xl
@@ -204,10 +199,7 @@ duration-300
         {/* Card 2: Eco Score */}
         <motion.div
           variants={cardVariants}
-          whileHover={{
-            y: -6,
-            scale: 1.02
-          }}
+          
           className="
 p-6
 rounded-2xl
@@ -241,11 +233,7 @@ drop-shadow-[0_0_12px_rgba(16,185,129,0.4)]
 
         {/* Card 3: Total Carbon Monthly */}
         <motion.div
-          variants={cardVariants}
-          whileHover={{
-            y: -6,
-            scale: 1.02
-          }}
+          
           className="
 p-6
 rounded-2xl
@@ -282,10 +270,7 @@ duration-300
         {/* Card 4: Completeness */}
         <motion.div
           variants={cardVariants}
-          whileHover={{
-            y: -6,
-            scale: 1.02
-          }}
+          
           className="
 p-6
 rounded-2xl

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from "/assets/logo.png";
-import carbonBg from "/assets/carbon-bg.jpg";
+import { lazy, Suspense } from "react";
+import logo from "/assets/logo.svg";
 import { motion, AnimatePresence } from 'motion/react';
 import {
   AppWindow, LayoutDashboard, Sliders, FlaskConical, Target, Award, ShieldCheck,
@@ -8,15 +8,15 @@ import {
 } from 'lucide-react';
 
 // Import sub components
-import RecruiterMode from './components/RecruiterMode';
-import Dashboard from './components/Dashboard';
-import FeatureLab from './components/FeatureLab';
-import Forecasting from './components/Forecasting';
-import Recommendations from './components/Recommendations';
-import ExplainableAI from './components/ExplainableAI';
-import SimulationLab from './components/SimulationLab';
-import ModelMonitoring from './components/ModelMonitoring';
-import LinkedInReport from './components/LinkedInReport';
+const Dashboard = lazy(() => import("./components/Dashboard"));
+const FeatureLab = lazy(() => import("./components/FeatureLab"));
+const Forecasting = lazy(() => import("./components/Forecasting"));
+const Recommendations = lazy(() => import("./components/Recommendations"));
+const ExplainableAI = lazy(() => import("./components/ExplainableAI"));
+const SimulationLab = lazy(() => import("./components/SimulationLab"));
+const ModelMonitoring = lazy(() => import("./components/ModelMonitoring"));
+const LinkedInReport = lazy(() => import("./components/LinkedInReport"));
+const RecruiterMode = lazy(() => import("./components/RecruiterMode"));
 import AddInputModal from './components/AddInputModal';
 import EcoCoach from './components/EcoCoach';
 import AuthPage from './components/AuthPage';
@@ -369,18 +369,23 @@ export default function App() {
   return (
 
     <div
-      className="min-h-screen text-gray-100 flex flex-col relative overflow-x-hidden"
-      style={{
-        backgroundImage: `url(${carbonBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        
-        backgroundAttachment:
-          window.innerWidth < 768 ? "scroll" : "fixed",
-      }}
-      
-    >
-      <div className="absolute inset-0 bg-black/87"></div>
+  className="
+    min-h-screen
+    text-gray-100
+    flex
+    flex-col
+    relative
+    overflow-x-hidden
+    bg-[#05070d]
+  "
+> <div className="absolute inset-0 pointer-events-none">
+  <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full bg-emerald-500/10 blur-3xl" />
+
+  <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-cyan-500/10 blur-3xl" />
+
+  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-pink-500/10 blur-3xl" />
+</div>
+      <div className="absolute inset-0 bg-black/70"></div>
 
 
 
@@ -396,6 +401,8 @@ export default function App() {
             <div className="flex items-center gap-2 px-2 py-1.5">
               <img
                 src={logo}
+                width={40}
+                height={40}
                 alt="EcoTwin Intelligence"
                 className="
 w-14 h-14
@@ -508,6 +515,8 @@ text-black flex items-center justify-center text-emerald-400 font-bold uppercase
           <div className="flex items-center gap-2">
             <img
               src={logo}
+              width={40}
+              height={40}
               alt="EcoTwin Intelligence"
               className="w-8 h-8 object-contain"
             />
@@ -535,6 +544,8 @@ text-black transition"
                 <div className="flex items-center gap-2 mb-6">
                   <img
                     src={logo}
+                    width={40}
+                    height={40}
                     alt="EcoTwin Intelligence"
                     className="w-8 h-8"
                   />
