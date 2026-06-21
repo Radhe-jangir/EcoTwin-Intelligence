@@ -363,9 +363,32 @@ app.post("/api/carbon/add-input", (req, res) => {
 
 // Run What-If Simulation Calculus under isolated accounts
 app.post("/api/carbon/recalculate", (req, res) => {
+  const db = loadDatabase();
+  const user = getActiveUser(req, db);
+
+  const periods = [
+    ...new Set(
+      user.dailyInputs.map(i => i.date.slice(0, 7))
+    )
+  ].sort();
+
+  user.engineeredHistory = periods.map(period => {
+    const monthlyInputs = user.dailyInputs.filter(
+      i => i.date.startsWith(period)
+    );
+
+    return aggregateMonthlyFeatures(
+      monthlyInputs,
+      period
+    );
+  });
+
+  saveDatabase(db);
+
   res.json({
     success: true,
-    message: "Refresh completed"
+    periods: periods.length,
+    historyLength: user.engineeredHistory.length
   });
 });
 
@@ -577,7 +600,7 @@ app.get("/api/project/export-zip", async (req, res) => {
       zlib: { level: 9 } // maximum compression level
     });
 
-    archive.on("error", (err) => {
+    archive.on("error", (err: unknown) => {
       console.error("Zipping error:", err);
       if (!res.headersSent) {
         res.status(500).send({ error: "Failed to compile archive" });

@@ -3,6 +3,7 @@ import logo from "/assets/logo.png";
 import CountUp from "react-countup";
 import CarbonDonutChart from "./CarbonDonutChart";
 import { motion } from 'motion/react';
+import type { Variants } from "motion/react";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   BarChart, Bar
@@ -93,18 +94,19 @@ const chartData = history.map(h => ({
     }
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 15 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 110,
-        damping: 14
-      }
+  const cardVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 15
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4
     }
-  };
+  }
+};
 
   return (
     <div className="w-full max-w-full overflow-x-hidden space-y-6 md:space-y-8">
@@ -119,41 +121,44 @@ const chartData = history.map(h => ({
             Analytical environment mirroring lifestyle footprint computations in real-time.
           </p>
         </div> */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-          <img
-            src={logo}
-            alt="EcoTwin AI"
-            className="
-w-10 h-10
-object-contain
-drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]
-"
-          />
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
 
-          <div>
-            <h1 className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight">
-              EcoTwin Intelligence Platform
-              
-            </h1>
-            <p className="text-zinc-400 text-sm sm:text-base">
-              AI-Powered Sustainability Analytics & Digital Twin Environment.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-          <button
-            onClick={onRefresh}
-            className="flex items-center gap-2 px-3 py-2 text-zinc-300 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 transition rounded-lg text-sm"
-          >
-            <RefreshCw className="w-4 h-4" /> Recalculate Models
-          </button>
-          <button
-            onClick={onAddInputClick}
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500 text-zinc-950 hover:bg-emerald-400 transition font-semibold rounded-lg text-sm flex-1 sm:flex-none"
-          >
-            <Plus className="w-4 h-4" /> Log Daily Input
-          </button>
-        </div>
+  <div className="flex items-center gap-3">
+    <img
+      src={logo}
+      alt="EcoTwin AI"
+      className="w-10 h-10 object-contain"
+    />
+
+    <div>
+      <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
+        EcoTwin Intelligence Platform
+      </h1>
+      <p className="text-zinc-400 text-sm sm:text-base">
+        AI-Powered Sustainability Analytics & Digital Twin Environment.
+      </p>
+    </div>
+  </div>
+
+  <div className="flex flex-col sm:flex-row gap-2">
+    <button
+      onClick={onAddInputClick}
+      className="flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500 text-zinc-950 hover:bg-emerald-400 transition font-semibold rounded-lg text-sm"
+    >
+      <Plus className="w-4 h-4" />
+      Log Daily Input
+    </button>
+
+    <button
+      onClick={onRefresh}
+      className="flex items-center gap-2 px-3 py-2 text-zinc-300 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 transition rounded-lg text-sm"
+    >
+      <RefreshCw className="w-4 h-4" />
+      Recalculate Models
+    </button>
+  </div>
+
+</div>
       </div>
 
       {/* KPI Cards Grid */}
@@ -458,10 +463,11 @@ hover:border-emerald-500/20
 transition-all duration-300
 "
         >
-          <div>
-            <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-              <Globe className="w-5 h-5 text-emerald-400" /> Current Sector Weight
-            </h3>
+          <div className="w-full min-h-[420px]">
+  <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
+    <Globe className="w-5 h-5 text-emerald-400" />
+    Current Sector Weight
+  </h3>
             <CarbonDonutChart
               data={[
                 {
@@ -566,7 +572,7 @@ space-y-4
           </div>
         ) : (
           <div className="overflow-x-auto max-w-full">
-            <table className="min-w-[900px] text-left border-collapse font-mono text-xs">
+            <table className="w-full">
               <thead>
                 <tr className="border-b border-zinc-800 text-zinc-400 uppercase tracking-wider">
                   <th className="py-3 px-4">Date</th>

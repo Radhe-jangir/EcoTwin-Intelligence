@@ -24,8 +24,8 @@ export default function CarbonDonutChart({
   }[];
 }) {
   return (
-    <div className="h-[320px]">
-      <ResponsiveContainer>
+    <div className="h-[320px] w-full">
+      <ResponsiveContainer width="100%" height={320}>
         <PieChart>
           <Pie
             data={data}

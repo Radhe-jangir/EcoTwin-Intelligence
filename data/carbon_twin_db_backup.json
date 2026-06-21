@@ -7,10 +7,10 @@
       "displayName": "Rdj",
       "dailyInputs": [
         {
-          "id": "2026-05-01",
-          "date": "2026-05-01",
+          "id": "2026-03-01",
+          "date": "2026-03-01",
           "transport": {
-            "distance_km": 22,
+            "distance_km": 30,
             "mode": "public",
             "fuelType": "diesel"
           },
@@ -18,15 +18,73 @@
             "meal_type": "vegetarian"
           },
           "electricity": {
-            "kwh_usage": 8.2,
+            "kwh_usage": 12.6,
             "bill_amount_usd": 0
           },
           "shopping": {
             "category": "clothing",
-            "amount_usd": 15
+            "amount_usd": 19
           },
           "waste": {
-            "weight_kg": 0.6,
+            "weight_kg": 1.06,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-02",
+          "date": "2026-03-02",
+          "transport": {
+            "distance_km": 30,
+            "mode": "bike",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 10.9,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 102
+          },
+          "waste": {
+            "weight_kg": 0.79,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-03",
+          "date": "2026-03-03",
+          "transport": {
+            "distance_km": 14,
+            "mode": "walk",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 12,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 21
+          },
+          "waste": {
+            "weight_kg": 0.77,
             "type": "recyclable"
           },
           "travel": {
@@ -35,17 +93,214 @@
             "cabinClass": "none"
           }
         },
-
-
-
-
-
-
         {
-          "id": "2026-06-01",
-          "date": "2026-06-01",
+          "id": "2026-03-04",
+          "date": "2026-03-04",
           "transport": {
-            "distance_km": 29,
+            "distance_km": 32,
+            "mode": "ev",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 12.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 1.45,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-05",
+          "date": "2026-03-05",
+          "transport": {
+            "distance_km": 25,
+            "mode": "car",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 8.4,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 47
+          },
+          "waste": {
+            "weight_kg": 1.04,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-06",
+          "date": "2026-03-06",
+          "transport": {
+            "distance_km": 21,
+            "mode": "public",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 5.2,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "clothing",
+            "amount_usd": 84
+          },
+          "waste": {
+            "weight_kg": 0.86,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-07",
+          "date": "2026-03-07",
+          "transport": {
+            "distance_km": 16,
+            "mode": "bike",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 7.6,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 79
+          },
+          "waste": {
+            "weight_kg": 1.01,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-08",
+          "date": "2026-03-08",
+          "transport": {
+            "distance_km": 11,
+            "mode": "walk",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 8.2,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 129
+          },
+          "waste": {
+            "weight_kg": 0.79,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-09",
+          "date": "2026-03-09",
+          "transport": {
+            "distance_km": 27,
+            "mode": "ev",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 8.9,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 0.2,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-10",
+          "date": "2026-03-10",
+          "transport": {
+            "distance_km": 30,
+            "mode": "car",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 5.7,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 105
+          },
+          "waste": {
+            "weight_kg": 0.5,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-11",
+          "date": "2026-03-11",
+          "transport": {
+            "distance_km": 26,
             "mode": "public",
             "fuelType": "diesel"
           },
@@ -53,15 +308,1030 @@
             "meal_type": "vegetarian"
           },
           "electricity": {
-            "kwh_usage": 11.5,
+            "kwh_usage": 6.3,
             "bill_amount_usd": 0
           },
           "shopping": {
             "category": "clothing",
-            "amount_usd": 18
+            "amount_usd": 69
           },
           "waste": {
-            "weight_kg": 0.47,
+            "weight_kg": 0.91,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-12",
+          "date": "2026-03-12",
+          "transport": {
+            "distance_km": 26,
+            "mode": "bike",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 9.5,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 57
+          },
+          "waste": {
+            "weight_kg": 0.23,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-13",
+          "date": "2026-03-13",
+          "transport": {
+            "distance_km": 31,
+            "mode": "walk",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 12.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 101
+          },
+          "waste": {
+            "weight_kg": 0.23,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-14",
+          "date": "2026-03-14",
+          "transport": {
+            "distance_km": 24,
+            "mode": "ev",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 13,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 1.35,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-03-15",
+          "date": "2026-03-15",
+          "transport": {
+            "distance_km": 30,
+            "mode": "car",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 8.1,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 29
+          },
+          "waste": {
+            "weight_kg": 0.74,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-01",
+          "date": "2026-04-01",
+          "transport": {
+            "distance_km": 11,
+            "mode": "bike",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 11.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 32
+          },
+          "waste": {
+            "weight_kg": 1.31,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-02",
+          "date": "2026-04-02",
+          "transport": {
+            "distance_km": 21,
+            "mode": "walk",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 11.2,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 31
+          },
+          "waste": {
+            "weight_kg": 0.35,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-03",
+          "date": "2026-04-03",
+          "transport": {
+            "distance_km": 18,
+            "mode": "ev",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 9.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 0.29,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-04",
+          "date": "2026-04-04",
+          "transport": {
+            "distance_km": 33,
+            "mode": "car",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 8.7,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 50
+          },
+          "waste": {
+            "weight_kg": 0.59,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-05",
+          "date": "2026-04-05",
+          "transport": {
+            "distance_km": 28,
+            "mode": "public",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 11.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "clothing",
+            "amount_usd": 66
+          },
+          "waste": {
+            "weight_kg": 0.88,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-06",
+          "date": "2026-04-06",
+          "transport": {
+            "distance_km": 18,
+            "mode": "bike",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 8.5,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 35
+          },
+          "waste": {
+            "weight_kg": 1.24,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-07",
+          "date": "2026-04-07",
+          "transport": {
+            "distance_km": 12,
+            "mode": "walk",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 5.7,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 96
+          },
+          "waste": {
+            "weight_kg": 1.43,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-08",
+          "date": "2026-04-08",
+          "transport": {
+            "distance_km": 23,
+            "mode": "ev",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 7.5,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 0.65,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-09",
+          "date": "2026-04-09",
+          "transport": {
+            "distance_km": 18,
+            "mode": "car",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 7.4,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 98
+          },
+          "waste": {
+            "weight_kg": 1.01,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-10",
+          "date": "2026-04-10",
+          "transport": {
+            "distance_km": 19,
+            "mode": "public",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 5.4,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "clothing",
+            "amount_usd": 117
+          },
+          "waste": {
+            "weight_kg": 0.28,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-11",
+          "date": "2026-04-11",
+          "transport": {
+            "distance_km": 15,
+            "mode": "bike",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 11.8,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 111
+          },
+          "waste": {
+            "weight_kg": 0.92,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-12",
+          "date": "2026-04-12",
+          "transport": {
+            "distance_km": 11,
+            "mode": "walk",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 9.9,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 77
+          },
+          "waste": {
+            "weight_kg": 1.59,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-13",
+          "date": "2026-04-13",
+          "transport": {
+            "distance_km": 20,
+            "mode": "ev",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 8,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 1.37,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-14",
+          "date": "2026-04-14",
+          "transport": {
+            "distance_km": 33,
+            "mode": "car",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 12.8,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 56
+          },
+          "waste": {
+            "weight_kg": 0.58,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-04-15",
+          "date": "2026-04-15",
+          "transport": {
+            "distance_km": 15,
+            "mode": "public",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 5.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "clothing",
+            "amount_usd": 26
+          },
+          "waste": {
+            "weight_kg": 0.22,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-01",
+          "date": "2026-05-01",
+          "transport": {
+            "distance_km": 12,
+            "mode": "walk",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 11,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 93
+          },
+          "waste": {
+            "weight_kg": 0.24,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-02",
+          "date": "2026-05-02",
+          "transport": {
+            "distance_km": 12,
+            "mode": "ev",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 5.4,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 0.69,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-03",
+          "date": "2026-05-03",
+          "transport": {
+            "distance_km": 15,
+            "mode": "car",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 12.1,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 75
+          },
+          "waste": {
+            "weight_kg": 1.23,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-04",
+          "date": "2026-05-04",
+          "transport": {
+            "distance_km": 26,
+            "mode": "public",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 6.5,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "clothing",
+            "amount_usd": 108
+          },
+          "waste": {
+            "weight_kg": 0.77,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-05",
+          "date": "2026-05-05",
+          "transport": {
+            "distance_km": 24,
+            "mode": "bike",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 5.9,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 111
+          },
+          "waste": {
+            "weight_kg": 1.11,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-06",
+          "date": "2026-05-06",
+          "transport": {
+            "distance_km": 32,
+            "mode": "walk",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 6.4,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 51
+          },
+          "waste": {
+            "weight_kg": 0.59,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-07",
+          "date": "2026-05-07",
+          "transport": {
+            "distance_km": 29,
+            "mode": "ev",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 8.4,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 0.73,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-08",
+          "date": "2026-05-08",
+          "transport": {
+            "distance_km": 15,
+            "mode": "car",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 9.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 96
+          },
+          "waste": {
+            "weight_kg": 0.76,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-09",
+          "date": "2026-05-09",
+          "transport": {
+            "distance_km": 11,
+            "mode": "public",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 10.1,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "clothing",
+            "amount_usd": 57
+          },
+          "waste": {
+            "weight_kg": 0.85,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-10",
+          "date": "2026-05-10",
+          "transport": {
+            "distance_km": 13,
+            "mode": "bike",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 6.6,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 108
+          },
+          "waste": {
+            "weight_kg": 1.48,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-11",
+          "date": "2026-05-11",
+          "transport": {
+            "distance_km": 22,
+            "mode": "walk",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "fish"
+          },
+          "electricity": {
+            "kwh_usage": 12.9,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "other",
+            "amount_usd": 124
+          },
+          "waste": {
+            "weight_kg": 0.98,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-12",
+          "date": "2026-05-12",
+          "transport": {
+            "distance_km": 34,
+            "mode": "ev",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 9.4,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 1.68,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-13",
+          "date": "2026-05-13",
+          "transport": {
+            "distance_km": 27,
+            "mode": "car",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "vegan"
+          },
+          "electricity": {
+            "kwh_usage": 9,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "electronics",
+            "amount_usd": 34
+          },
+          "waste": {
+            "weight_kg": 0.83,
+            "type": "compost"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-14",
+          "date": "2026-05-14",
+          "transport": {
+            "distance_km": 26,
+            "mode": "public",
+            "fuelType": "petrol"
+          },
+          "food": {
+            "meal_type": "vegetarian"
+          },
+          "electricity": {
+            "kwh_usage": 9.6,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "clothing",
+            "amount_usd": 69
+          },
+          "waste": {
+            "weight_kg": 1.59,
+            "type": "landfill"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-05-15",
+          "date": "2026-05-15",
+          "transport": {
+            "distance_km": 28,
+            "mode": "bike",
+            "fuelType": "electric"
+          },
+          "food": {
+            "meal_type": "poultry"
+          },
+          "electricity": {
+            "kwh_usage": 9,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "home_goods",
+            "amount_usd": 131
+          },
+          "waste": {
+            "weight_kg": 0.81,
+            "type": "recyclable"
+          },
+          "travel": {
+            "distance_km": 0,
+            "mode": "none",
+            "cabinClass": "none"
+          }
+        },
+        {
+          "id": "2026-06-01",
+          "date": "2026-06-01",
+          "transport": {
+            "distance_km": 29,
+            "mode": "ev",
+            "fuelType": "diesel"
+          },
+          "food": {
+            "meal_type": "red_meat"
+          },
+          "electricity": {
+            "kwh_usage": 8.3,
+            "bill_amount_usd": 0
+          },
+          "shopping": {
+            "category": "none",
+            "amount_usd": 0
+          },
+          "waste": {
+            "weight_kg": 0.24,
             "type": "compost"
           },
           "travel": {
@@ -74,23 +1344,23 @@
           "id": "2026-06-02",
           "date": "2026-06-02",
           "transport": {
-            "distance_km": 19,
-            "mode": "bike",
+            "distance_km": 25,
+            "mode": "car",
             "fuelType": "petrol"
           },
           "food": {
-            "meal_type": "poultry"
+            "meal_type": "vegan"
           },
           "electricity": {
-            "kwh_usage": 6.3,
+            "kwh_usage": 9.6,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "home_goods",
-            "amount_usd": 43
+            "category": "electronics",
+            "amount_usd": 116
           },
           "waste": {
-            "weight_kg": 0.53,
+            "weight_kg": 0.84,
             "type": "landfill"
           },
           "travel": {
@@ -104,22 +1374,22 @@
           "date": "2026-06-03",
           "transport": {
             "distance_km": 20,
-            "mode": "walk",
+            "mode": "public",
             "fuelType": "diesel"
           },
           "food": {
-            "meal_type": "fish"
+            "meal_type": "vegetarian"
           },
           "electricity": {
-            "kwh_usage": 7.5,
+            "kwh_usage": 12.2,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "other",
-            "amount_usd": 82
+            "category": "clothing",
+            "amount_usd": 40
           },
           "waste": {
-            "weight_kg": 0.58,
+            "weight_kg": 0.61,
             "type": "recyclable"
           },
           "travel": {
@@ -132,23 +1402,23 @@
           "id": "2026-06-04",
           "date": "2026-06-04",
           "transport": {
-            "distance_km": 14,
-            "mode": "ev",
+            "distance_km": 12,
+            "mode": "bike",
             "fuelType": "petrol"
           },
           "food": {
-            "meal_type": "red_meat"
+            "meal_type": "poultry"
           },
           "electricity": {
-            "kwh_usage": 5.9,
+            "kwh_usage": 10.8,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "none",
-            "amount_usd": 0
+            "category": "home_goods",
+            "amount_usd": 75
           },
           "waste": {
-            "weight_kg": 0.51,
+            "weight_kg": 0.64,
             "type": "compost"
           },
           "travel": {
@@ -161,23 +1431,23 @@
           "id": "2026-06-05",
           "date": "2026-06-05",
           "transport": {
-            "distance_km": 19,
-            "mode": "car",
+            "distance_km": 13,
+            "mode": "walk",
             "fuelType": "electric"
           },
           "food": {
-            "meal_type": "vegan"
+            "meal_type": "fish"
           },
           "electricity": {
-            "kwh_usage": 9.9,
+            "kwh_usage": 6.4,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "electronics",
-            "amount_usd": 81
+            "category": "other",
+            "amount_usd": 54
           },
           "waste": {
-            "weight_kg": 0.89,
+            "weight_kg": 1.45,
             "type": "landfill"
           },
           "travel": {
@@ -190,23 +1460,23 @@
           "id": "2026-06-06",
           "date": "2026-06-06",
           "transport": {
-            "distance_km": 33,
-            "mode": "public",
+            "distance_km": 27,
+            "mode": "ev",
             "fuelType": "petrol"
           },
           "food": {
-            "meal_type": "vegetarian"
+            "meal_type": "red_meat"
           },
           "electricity": {
-            "kwh_usage": 7.8,
+            "kwh_usage": 8.4,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "clothing",
-            "amount_usd": 20
+            "category": "none",
+            "amount_usd": 0
           },
           "waste": {
-            "weight_kg": 1.06,
+            "weight_kg": 1.13,
             "type": "recyclable"
           },
           "travel": {
@@ -219,23 +1489,23 @@
           "id": "2026-06-07",
           "date": "2026-06-07",
           "transport": {
-            "distance_km": 25,
-            "mode": "bike",
+            "distance_km": 24,
+            "mode": "car",
             "fuelType": "diesel"
           },
           "food": {
-            "meal_type": "poultry"
+            "meal_type": "vegan"
           },
           "electricity": {
-            "kwh_usage": 7,
+            "kwh_usage": 12.8,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "home_goods",
-            "amount_usd": 42
+            "category": "electronics",
+            "amount_usd": 133
           },
           "waste": {
-            "weight_kg": 1.21,
+            "weight_kg": 0.94,
             "type": "compost"
           },
           "travel": {
@@ -248,23 +1518,23 @@
           "id": "2026-06-08",
           "date": "2026-06-08",
           "transport": {
-            "distance_km": 25,
-            "mode": "walk",
+            "distance_km": 17,
+            "mode": "public",
             "fuelType": "petrol"
           },
           "food": {
-            "meal_type": "fish"
+            "meal_type": "vegetarian"
           },
           "electricity": {
-            "kwh_usage": 7.3,
+            "kwh_usage": 11,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "other",
-            "amount_usd": 101
+            "category": "clothing",
+            "amount_usd": 21
           },
           "waste": {
-            "weight_kg": 1.11,
+            "weight_kg": 0.45,
             "type": "landfill"
           },
           "travel": {
@@ -278,22 +1548,22 @@
           "date": "2026-06-09",
           "transport": {
             "distance_km": 26,
-            "mode": "ev",
+            "mode": "bike",
             "fuelType": "diesel"
           },
           "food": {
-            "meal_type": "red_meat"
+            "meal_type": "poultry"
           },
           "electricity": {
-            "kwh_usage": 6.3,
+            "kwh_usage": 11.8,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "none",
-            "amount_usd": 0
+            "category": "home_goods",
+            "amount_usd": 93
           },
           "waste": {
-            "weight_kg": 1.59,
+            "weight_kg": 0.33,
             "type": "recyclable"
           },
           "travel": {
@@ -306,23 +1576,23 @@
           "id": "2026-06-10",
           "date": "2026-06-10",
           "transport": {
-            "distance_km": 24,
-            "mode": "car",
+            "distance_km": 25,
+            "mode": "walk",
             "fuelType": "electric"
           },
           "food": {
-            "meal_type": "vegan"
+            "meal_type": "fish"
           },
           "electricity": {
-            "kwh_usage": 11.9,
+            "kwh_usage": 10.7,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "electronics",
-            "amount_usd": 51
+            "category": "other",
+            "amount_usd": 62
           },
           "waste": {
-            "weight_kg": 0.53,
+            "weight_kg": 1.66,
             "type": "compost"
           },
           "travel": {
@@ -335,23 +1605,23 @@
           "id": "2026-06-11",
           "date": "2026-06-11",
           "transport": {
-            "distance_km": 11,
-            "mode": "public",
+            "distance_km": 17,
+            "mode": "ev",
             "fuelType": "diesel"
           },
           "food": {
-            "meal_type": "vegetarian"
+            "meal_type": "red_meat"
           },
           "electricity": {
-            "kwh_usage": 10.9,
+            "kwh_usage": 7,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "clothing",
-            "amount_usd": 95
+            "category": "none",
+            "amount_usd": 0
           },
           "waste": {
-            "weight_kg": 0.3,
+            "weight_kg": 0.59,
             "type": "landfill"
           },
           "travel": {
@@ -364,23 +1634,23 @@
           "id": "2026-06-12",
           "date": "2026-06-12",
           "transport": {
-            "distance_km": 27,
-            "mode": "bike",
+            "distance_km": 15,
+            "mode": "car",
             "fuelType": "petrol"
           },
           "food": {
-            "meal_type": "poultry"
+            "meal_type": "vegan"
           },
           "electricity": {
-            "kwh_usage": 10.4,
+            "kwh_usage": 8.2,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "home_goods",
-            "amount_usd": 122
+            "category": "electronics",
+            "amount_usd": 17
           },
           "waste": {
-            "weight_kg": 0.32,
+            "weight_kg": 1.38,
             "type": "recyclable"
           },
           "travel": {
@@ -393,23 +1663,23 @@
           "id": "2026-06-13",
           "date": "2026-06-13",
           "transport": {
-            "distance_km": 17,
-            "mode": "walk",
+            "distance_km": 25,
+            "mode": "public",
             "fuelType": "diesel"
           },
           "food": {
-            "meal_type": "fish"
+            "meal_type": "vegetarian"
           },
           "electricity": {
             "kwh_usage": 5.5,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "other",
-            "amount_usd": 66
+            "category": "clothing",
+            "amount_usd": 50
           },
           "waste": {
-            "weight_kg": 0.74,
+            "weight_kg": 0.7,
             "type": "compost"
           },
           "travel": {
@@ -423,52 +1693,23 @@
           "date": "2026-06-14",
           "transport": {
             "distance_km": 13,
-            "mode": "ev",
+            "mode": "bike",
             "fuelType": "petrol"
           },
           "food": {
-            "meal_type": "red_meat"
+            "meal_type": "poultry"
           },
           "electricity": {
-            "kwh_usage": 10.2,
+            "kwh_usage": 9.3,
             "bill_amount_usd": 0
           },
           "shopping": {
-            "category": "none",
-            "amount_usd": 0
+            "category": "home_goods",
+            "amount_usd": 63
           },
           "waste": {
-            "weight_kg": 1.38,
+            "weight_kg": 1.42,
             "type": "landfill"
-          },
-          "travel": {
-            "distance_km": 0,
-            "mode": "none",
-            "cabinClass": "none"
-          }
-        },
-        {
-          "id": "2026-06-15",
-          "date": "2026-06-15",
-          "transport": {
-            "distance_km": 33,
-            "mode": "car",
-            "fuelType": "electric"
-          },
-          "food": {
-            "meal_type": "vegan"
-          },
-          "electricity": {
-            "kwh_usage": 12.9,
-            "bill_amount_usd": 0
-          },
-          "shopping": {
-            "category": "electronics",
-            "amount_usd": 83
-          },
-          "waste": {
-            "weight_kg": 1.67,
-            "type": "recyclable"
           },
           "travel": {
             "distance_km": 0,
@@ -479,22 +1720,76 @@
       ],
       "engineeredHistory": [
         {
+          "id": "2026-03",
+          "userId": "user_digital_twin_1",
+          "period": "2026-03",
+          "totalCO2e_kg": 440.1,
+          "transportCO2e_kg": 16.8,
+          "foodCO2e_kg": 148.9,
+          "electricityCO2e_kg": 32.9,
+          "shoppingCO2e_kg": 234.7,
+          "wasteCO2e_kg": 6.8,
+          "travelCO2e_kg": 0,
+          "monthlyTransportDistance_km": 373,
+          "avgFoodImpactScore_normalized": 0.43,
+          "avgElectricityUsage_kWh": 141,
+          "wasteDiversionRate": 0.591,
+          "sustainabilityIndex": 67,
+          "dataCompletenessScore": 0.54
+        },
+        {
+          "id": "2026-04",
+          "userId": "user_digital_twin_1",
+          "period": "2026-04",
+          "totalCO2e_kg": 448.9,
+          "transportCO2e_kg": 25.4,
+          "foodCO2e_kg": 148.9,
+          "electricityCO2e_kg": 31.2,
+          "shoppingCO2e_kg": 238.1,
+          "wasteCO2e_kg": 5.2,
+          "travelCO2e_kg": 0,
+          "monthlyTransportDistance_km": 295,
+          "avgFoodImpactScore_normalized": 0.43,
+          "avgElectricityUsage_kWh": 134.1,
+          "wasteDiversionRate": 0.734,
+          "sustainabilityIndex": 69,
+          "dataCompletenessScore": 0.54
+        },
+        {
+          "id": "2026-05",
+          "userId": "user_digital_twin_1",
+          "period": "2026-05",
+          "totalCO2e_kg": 503,
+          "transportCO2e_kg": 20.6,
+          "foodCO2e_kg": 148.9,
+          "electricityCO2e_kg": 30.7,
+          "shoppingCO2e_kg": 295.3,
+          "wasteCO2e_kg": 7.5,
+          "travelCO2e_kg": 0,
+          "monthlyTransportDistance_km": 326,
+          "avgFoodImpactScore_normalized": 0.43,
+          "avgElectricityUsage_kWh": 131.6,
+          "wasteDiversionRate": 0.642,
+          "sustainabilityIndex": 68,
+          "dataCompletenessScore": 0.54
+        },
+        {
           "id": "2026-06",
           "userId": "user_digital_twin_1",
           "period": "2026-06",
-          "totalCO2e_kg": 432.9,
-          "transportCO2e_kg": 14.4,
-          "foodCO2e_kg": 148.9,
-          "electricityCO2e_kg": 30.6,
-          "shoppingCO2e_kg": 232.6,
-          "wasteCO2e_kg": 6.3,
+          "totalCO2e_kg": 441.2,
+          "transportCO2e_kg": 22.1,
+          "foodCO2e_kg": 139.6,
+          "electricityCO2e_kg": 30.8,
+          "shoppingCO2e_kg": 242.1,
+          "wasteCO2e_kg": 6.7,
           "travelCO2e_kg": 0,
-          "monthlyTransportDistance_km": 335,
-          "avgFoodImpactScore_normalized": 0.43,
-          "avgElectricityUsage_kWh": 131.3,
-          "wasteDiversionRate": 0.673,
+          "monthlyTransportDistance_km": 288,
+          "avgFoodImpactScore_normalized": 0.425,
+          "avgElectricityUsage_kWh": 132,
+          "wasteDiversionRate": 0.616,
           "sustainabilityIndex": 68,
-          "dataCompletenessScore": 0.54
+          "dataCompletenessScore": 0.5
         }
       ],
       "userPersona": "Sustainability Enthusiast",
